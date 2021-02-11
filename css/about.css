@@ -1,0 +1,487 @@
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+.tab-label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 1em;
+  background: #3f90e1;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  transition: all .25s;
+}
+
+.tab-label:hover {
+  background: #075baa;
+}
+
+.tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: rgb(237, 237, 237);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  font-size: .9rem;
+}
+
+.about-studio-paragraph,
+.jumbotron-heading,
+.space-top,
+.our-advantage,
+.number,
+.email,
+.country {
+  transition: all 500ms ease 0ms;
+}
+
+.jumbotron-heading,
+.about-title {
+  font-weight: 700;
+}
+
+.jumbotron-heading {
+  font-size: 9.5vw;
+  line-height: 10.5vw;
+  padding: 10px;
+}
+
+.space-top {
+  margin-top: 150px;
+}
+
+.about-title {
+  font-family: 'Tutillium Web', sans-serif;
+  font-size: 3rem;
+}
+
+.about-studio {
+  margin-top: 8vw;
+  letter-spacing: .3rem;
+  font-size: 5vw;
+}
+
+.about-studio-paragraph {
+  font-size: 17px;
+}
+
+.jumbotron-img {
+  background: linear-gradient(0deg, rgba(100, 255, 150, 0.3), rgba(255, 0, 150, 0.3)), url('../img/background1.jpeg') center center/cover;
+}
+
+.our-advantage {
+  z-index: 1;
+}
+
+.advantage {
+  counter-reset: countblock;
+}
+
+.our-advantage:nth-child(1)::before,
+.our-advantage:nth-child(2)::before,
+.our-advantage:nth-child(3)::before,
+.our-advantage:nth-child(4)::before,
+.our-advantage:nth-child(5)::before {
+  content: "0"counter(countblock);
+}
+
+.our-advantage::before {
+  content: counter(countblock);
+  counter-increment: countblock;
+  position: absolute;
+  top: .1rem;
+  left: -.3rem;
+  z-index: -1;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #b9dcf3;
+  -webkit-text-fill-color: transparent;
+}
+
+.our-work-principle {
+  margin-top: 125px;
+}
+
+.our-project {
+  z-index: 1;
+  display: inline-block;
+  border: 0;
+  position: relative;
+}
+
+.our-project::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: #b9d6e9;
+  z-index: -1;
+  transition: transform 500ms;
+  transform: scale(0.5);
+}
+
+.our-project:hover::before,
+.our-project:focus::before {
+  transform: scale(1);
+}
+
+.our-project-text {
+  margin-top: 12px;
+  position: relative;
+  font-family: 'Tutillium Web', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.35rem;
+  color: #fff;
+  display: inline-block;
+}
+
+.our-project-text::after {
+  position: absolute;
+  top: 30px;
+  left: 17px;
+  content: '';
+  height: 3px;
+  background-color: rgb(126, 167, 255);
+  width: 0%;
+  transition: width .75s;
+}
+
+.line-animation::after {
+  width: 88.5% !important;
+}
+
+.our-advantage-text,
+.about-text,
+.ctc-text {
+  line-height: 1.7rem;
+  font-size: .95rem;
+}
+
+.our-advantage-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+.profile-image {
+  margin-right: 28%;
+}
+
+.profile-image-left {
+  margin-left: 28%;
+}
+
+.profile-info {
+  top: 25%;
+  left: 65%;
+}
+
+.profile-data-right,
+.profile-data-left {
+  position: relative;
+  padding: 20px !important;
+  background-color: #f3f3f3;
+}
+
+.profile-info-bot {
+  top: 80%;
+  left: 60%;
+}
+
+.first-profile,
+.second-profile,
+.third-profile {
+  padding-bottom: 150px;
+}
+
+.second-profile-img {
+  position: relative;
+  right: 20%;
+}
+
+.personal-info-2 {
+  margin-left: 39px;
+}
+
+.profile-image img,
+.profile-image-left img {
+  width: 120%;
+}
+
+.name {
+  margin-bottom: .3rem;
+  font-size: 2.75rem;
+  font-weight: 700
+}
+
+.major {
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.number,
+.email,
+.country {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #7ba2b6;
+  margin-bottom: .75rem;
+}
+
+@media screen and (max-width: 480px) {
+  .major {
+    font-size: .65rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 991px) {
+  .major {
+    font-size: .9rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-studio-paragraph {
+    padding: 20px;
+    font-size: 13px;
+  }
+
+  .jumbotron-heading {
+    top: 30% !important;
+  }
+
+  .number {
+    font-weight: 500;
+  }
+
+  .number,
+  .email,
+  .country {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  .profile-image,
+  .profile-image-left {
+    width: 80% !important;
+  }
+
+  .profile-info {
+    padding: 30px 20px 0 40% !important;
+  }
+
+  .profile-info.left {
+    padding: 30px 20px 0 15% !important;
+  }
+
+  .about-title {
+    font-size: 2.25rem
+  }
+
+  .about-title2 {
+    padding: 0 15px;
+  }
+
+  .personal-info-2,
+  .personal-info {
+    margin-left: 0;
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 991px) {
+
+  .space-padding,
+  .space-button,
+  .space-top {
+    padding: 0 30px;
+  }
+
+  .about-studio-paragraph {
+    font-size: 15px;
+  }
+
+  .about-title2 {
+    padding: 0 35px;
+  }
+
+  .personal-info {
+    margin-left: 39px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-advantage {
+    margin-bottom: 4rem;
+  }
+
+  .our-advantage:nth-child(5) {
+    margin-bottom: 0;
+  }
+
+  .our-advantage::before {
+    top: -5.75rem;
+    font-size: 60px;
+  }
+
+  .our-work-principle {
+    margin-top: 25px;
+  }
+
+  .display-small-none {
+    display: none;
+  }
+
+  .space-margin {
+    margin-top: 5.5rem !important;
+  }
+
+  .order-one {
+    order: 1;
+    padding: 30px 15px;
+  }
+
+  .order-two {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  .space-padding,
+  .space-margin,
+  .space-button,
+  .space-top {
+    max-width: 100% !important;
+  }
+
+  .space-margin {
+    margin-top: 6.5rem;
+  }
+
+  .space-padding-2 {
+    padding: 0 30px;
+  }
+
+  .flex-order-1 {
+    order: 1;
+  }
+
+  .flex-order-2 {
+    order: 2;
+  }
+
+  .our-work-principle {
+    margin-top: 0px;
+  }
+
+  .principle {
+    margin: 2rem 0;
+  }
+
+  .jumbotron-heading {
+    top: 40%;
+  }
+
+  .space-top {
+    margin-top: 75px;
+  }
+
+  .first-profile,
+  .second-profile,
+  .third-profile {
+    padding-bottom: 25px !important;
+  }
+
+  .profile-data-right,
+  .profile-data-left {
+    background-color: #fff;
+  }
+
+  .profile-image,
+  .profile-image-left {
+    width: 70%;
+  }
+
+  .profile-image img,
+  .profile-image-left img {
+    width: 100%;
+  }
+
+  .second-profile-img {
+    right: 0;
+  }
+
+  .profile-info {
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 30px 20px 0 35%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile-info.left {
+    padding: 30px 20px 0 20%;
+  }
+
+  .name {
+    font-size: 6vw;
+  }
+
+  .personal-info-2 {
+    text-align: right;
+    margin-left: 0;
+    margin-right: 39px;
+  }
+
+  .primary-text-color {
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (min-device-width : 1367px) and (max-device-width : 1920px) and (max-device-height : 1080px) {
+  .major {
+    font-size: 1.2rem;
+  }
+
+  .about-studio-paragraph {
+    font-size: 20px;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .our-advantage-text {
+    font-size: 1.1rem;
+  }
+}
