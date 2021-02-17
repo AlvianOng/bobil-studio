@@ -14,9 +14,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <style>
+    .mobile-nav {
+      padding: 17px 15px 10px 67.5px !important;
+    }
+
     .fixed-top {
       top: 30px;
       padding: 30px;
+    }
+
+    a.neon-light {
+      color: #fff !important;
+    }
+
+    a.neon-light::after,
+    a.neon-light::before {
+      background: #fff !important;
+    }
+
+    .brand-name {
+      color: #fff;
+    }
+
+    @media screen and (max-width: 991px) {
+      .mobile-nav {
+        padding: 10px 20px !important;
+      }
     }
   </style>
 </head>
@@ -39,53 +62,68 @@
       </div>
     </div>
     <div class="text">
-      <header class="head">
-        <div class="mobile-nav brand d-flex align-items-center">
-          <a href="index.html"><img src="img/logo.png" class="brand-logo" alt="logo"></a>
-          <div class="menu-wrapper">
-            <div class="hamburger-menu"></div>
-          </div>
-        </div>
-        <nav class="main-menu navbar navbar-expand-lg navbar-light container mr-0" style="padding: 1rem">
-          <figure id="home" class="bg-header"
-            style="background: url(img/ar-background.jpg) no-repeat center center/cover;">
-          </figure>
-          <figure id="project" class="bg-header"
-            style="background: url(img/ar-background-2.jpg) no-repeat center center/cover;">
-          </figure>
-          <figure id="about" class="bg-header"
-            style="background: url(img/hologram-background.jpg) no-repeat center center/cover;">
-          </figure>
-          <figure id="contact" class="bg-header"
-            style="background: url(img/vr-lens.jpg) no-repeat center center/cover;">
-          </figure>
-          <div class="mt-1 d-block collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav d-flex align-items-center ml-auto" style="z-index: 999">
-              <a href="index.html" class="neon-light one active">
-                Home
-              </a>
-              <a href="project.html" class="neon-light two">
-                Project
-              </a>
-              <a href="about.html" class="neon-light three">
-                About
-              </a>
-              <a href="contact.html" class="neon-light four">
-                Contact
-              </a>
+      <section class="showcase">
+        <header class="head" style="background-color: transparent;">
+          <div class="mobile-nav brand d-flex align-items-center">
+            <a href="index.html" class="text-uppercase font-weight-bolder brand-name">BOBIL</a>
+            <div class="menu-wrapper">
+              <div class="hamburger-menu"></div>
             </div>
           </div>
-        </nav>
-      </header>
+          <nav class="main-menu navbar navbar-expand-lg navbar-light container mr-0" style="padding: 1rem; max-width:inherit">
+            <figure id="home" class="bg-header"
+              style="background: url(img/ar-background.jpg) no-repeat center center/cover;">
+            </figure>
+            <figure id="project" class="bg-header"
+              style="background: url(img/ar-background-2.jpg) no-repeat center center/cover;">
+            </figure>
+            <figure id="about" class="bg-header"
+              style="background: url(img/hologram-background.jpg) no-repeat center center/cover;">
+            </figure>
+            <figure id="contact" class="bg-header"
+              style="background: url(img/vr-lens.jpg) no-repeat center center/cover;">
+            </figure>
+            <div class="mt-1 d-block collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav d-flex align-items-center ml-auto" style="z-index: 999">
+                <a href="index.html" class="neon-light one active">
+                  Home
+                </a>
+                <a href="project.html" class="neon-light two">
+                  Project
+                </a>
+                <a href="about.html" class="neon-light three">
+                  About
+                </a>
+                <a href="contact.html" class="neon-light four">
+                  Contact
+                </a>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <video src="video/virtual-reality.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="overlay-text">
+          <h2 class="line-1 animate__animated animate__fadeInDown">Great Developers</h2>
+          <h3 class="line-2 animate__animated animate__fadeInLeft">Never Stop Learning</h3>
+          <p class="line-3 animate__animated animate__fadeIn">"Design creates culture. Culture shapes values. Values determine the future." <br><span style="font-size: .75em; font-weight: normal;">-- Robert L. Peters, designer and author</span></p>
+          <a href="#" class="btn-showcase-video animate__animated animate__fadeInRight">Explore</a>
+        </div>
+        <ul class="social animate__animated animate__fadeInUp">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </section>
+
 
       <main>
-        <div class="px-3" class="animate-css-overflow">
+        <div class="px-3 animate-css-overflow">
           <article class="row description first">
-            <div class="big-background animate__animated animate__fadeInLeft" style="animation-delay: 4.35s;"></div>
+            <div class="big-background animate__animated animate-scroll custom-left"></div>
             <div class="col-5 px-lg-5 number-title-container">
-              <div class="numbering animate__animated animate__fadeIn" style="animation-delay: 4.35s;">01</div>
-              <div class="title-for-project text-uppercase animate__animated animate__fadeInLeft"
-                style="animation-delay: 4.35s;">
+              <div class="numbering animate__animated animate-scroll custom-middle">01</div>
+              <div class="title-for-project text-uppercase animate__animated animate-scroll custom-left">
                 <h1 class="m-0">Hologram</h1>
                 <p class="m-0">[ hɑː.lə.ɡræm ]</p>
               </div>
@@ -93,7 +131,7 @@
             <div class="col-12 col-md-6 col-lg-2 p-0 mt-5 mt-lg-0">
               <div class="container-box">
                 <div class="hologram-container">
-                  <div class="glitch animate__animated animate__fadeIn" style="animation-delay: 4.35s;">
+                  <div class="glitch animate__animated animate-scroll custom-middle">
                     <div class="glitch__item"></div>
                     <div class="glitch__item"></div>
                     <div class="glitch__item"></div>
@@ -106,9 +144,9 @@
             </div>
             <div
               class="col-lg-5 first-hologram-padding col-md-6 col-12 d-flex flex-column justify-content-center px-4 px-sm-5 pl-md-3 pl-lg-0 pr-lg-5">
-              <h3 class="sub-title text-uppercase animate__animated animate__fadeIn" style="animation-delay: 4.35s;">
+              <h3 class="sub-title text-uppercase animate__animated animate-scroll custom-middle">
                 About</h3>
-              <p class="paragraph animate__animated animate__fadeInUp" style="animation-delay: 4.35s;">In simple terms,
+              <p class="paragraph animate__animated animate-scroll custom-right">In simple terms,
                 a hologram technology is a three-dimensional projection which can be
                 seen without using any special equipment such as cameras or glasses. The image can be viewed from any
                 angle, so as the user walks around the display the object will appear to move and shift realistically.
@@ -130,7 +168,7 @@
             </div>
             <div class="col-12 col-md-6 p-0">
               <div class="container-box">
-                <div class="the-box2">
+                <div class="the-box2 animate__animated animate-scroll custom-middle">
                   <img class="the-box-img vr" src="img/vr-game.png" alt="">
                 </div>
               </div>
@@ -171,7 +209,7 @@
             </div>
           </article>
         </div>
-        <div class="body-grid" class="animate-css-overflow">
+        <div class="body-grid animate-css-overflow">
           <div class="grid text-uppercase">
             <a href="project.html" style="color: black;">
               <div class="grid-item">
@@ -293,7 +331,7 @@
               class="fas fa-long-arrow-alt-up" style="font-size: 2rem; color: #595959;"></i></a>
         </div>
         <div class="col-12 px-0 footer-bottom">
-          <p class="mb-0 text-center copyright-bolder">© Bobil Studio 2020 | All rights reserved.</p>
+          <p class="mb-0 text-center copyright-bolder">© Bobil Studio 2021 | All rights reserved.</p>
         </div>
       </footer>
     </div>

@@ -38,6 +38,7 @@ $('.menu-wrapper').click(function () {
 $(function () {
   $('.menu-wrapper').on('click', function () {
     $('.hamburger-menu').toggleClass('animate');
+    $('.brand-name').toggleClass('brand-color');
     $('.mobile-nav').toggleClass('change');
   })
 });
@@ -80,3 +81,10 @@ $('.neon-light').mouseenter(function () {
 $('.neon-light').mouseleave(function () {
   $(this).removeClass('hover-animation')
 })
+
+$(window).bind("resize", function () {
+  console.log($(this).width())
+  if ($(this).width() > 991) {
+    $('.brand-name').removeClass('brand-color')
+  }
+}).trigger('resize');

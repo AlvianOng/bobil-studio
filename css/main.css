@@ -1,3 +1,165 @@
+.line-1 {
+  animation-delay: 4.5s;
+}
+
+.line-2 {
+  animation-delay: 5.25s;
+}
+
+.line-3 {
+  animation-delay: 6.25s;
+}
+
+.btn-showcase-video {
+  animation-delay: 7.25s;
+}
+
+a.btn-showcase-video::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 9%;
+  width: 85px;
+  height: 1.25em;
+  background: #333;
+  z-index: -1;
+  transition: transform 175ms ease-in-out;
+  transform-origin: bottom left;
+}
+
+a.btn-showcase-video:hover::after,
+a.btn-showcase-video:focus::after {
+  transform: scale(1.4, 2.3);
+}
+
+.showcase,
+.showcase header,
+.social,
+.overlay-text h3,
+.overlay-text h2,
+.overlay-text p {
+  transition: ease-in-out 0.5s;
+}
+
+.showcase {
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(77, 77, 77);
+  mix-blend-mode: overlay;
+}
+
+.overlay-text {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.overlay-text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.overlay-text h3 {
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.overlay-text p {
+  font-size: 1.1em;
+  font-weight: 200;
+  margin: 20px 0;
+  max-width: 700px;
+}
+
+.overlay-text a {
+  padding: 15px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.social {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  padding: 0 100px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  z-index: 10;
+  animation-delay: 8.25s;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 30px;
+  transition: 0.5s;
+  transform: scale(1.3);
+}
+
+.social li a:hover {
+  transform: scale(1.3) translateY(-15px);
+}
+
 .description {
   position: relative;
   height: 100vh;
@@ -5,6 +167,7 @@
 }
 
 .description.first {
+  margin-top: 40px;
   margin-bottom: 100px;
 }
 
@@ -26,15 +189,25 @@
 }
 
 .description.first .big-background {
-  background: linear-gradient(300deg, #fff 50%, transparent 50.1%), linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url('../img/hologram-background.jpg') no-repeat center/cover;
+  background: linear-gradient(300deg, #fff 50%, transparent 50.1%),
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)),
+    url("../img/hologram-background.jpg") no-repeat center/cover;
 }
 
 .description.second .big-background {
-  background: linear-gradient(240deg, #fff 53%, transparent 53.1%), url('../img/vr-game-bg.jpg') no-repeat bottom/cover;
+  background: linear-gradient(240deg, #fff 53%, transparent 53.1%),
+    url("../img/vr-game-bg.jpg") no-repeat bottom/cover;
 }
 
-.description.third .big-background { 
-  background: linear-gradient(225deg, rgba(0, 0, 0, 0) 45%, rgba(255, 255, 255, 1) 45.1%, rgba(255, 255, 255, 1) 85%, rgba(0, 0, 0, 0) 85.1%), url('../img/ar-background-2.jpg') no-repeat top/cover;
+.description.third .big-background {
+  background: linear-gradient(
+      225deg,
+      rgba(0, 0, 0, 0) 45%,
+      rgba(255, 255, 255, 1) 45.1%,
+      rgba(255, 255, 255, 1) 85%,
+      rgba(0, 0, 0, 0) 85.1%
+    ),
+    url("../img/ar-background-2.jpg") no-repeat top/cover;
 }
 
 .description .sub-title {
@@ -110,7 +283,7 @@
 }
 
 .description .paragraph:before {
-  content: '';
+  content: "";
   width: 25%;
   height: 1.25px;
   background-color: black;
@@ -162,7 +335,7 @@
   animation-delay: 2s;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: #68BBE3;
+  -webkit-text-stroke-color: #68bbe3;
 }
 
 .container-box .the-box-img.vr {
@@ -221,27 +394,52 @@
 }
 
 .hover-background.vr-one {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../img/vr-grid.png') no-repeat 50% center/cover;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("../img/vr-grid.png") no-repeat 50% center/cover;
 }
 
 .hover-background.ar-one {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../img/ar-grid.jpg') no-repeat 50% center/cover;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("../img/ar-grid.jpg") no-repeat 50% center/cover;
 }
 
 .hover-background.holo-one {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../img/holo-grid.jpg') no-repeat 50% center/cover;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("../img/holo-grid.jpg") no-repeat 50% center/cover;
 }
 
 .hover-background.vr-two {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../img/vr-grid-2.jpg') no-repeat 50% center/cover;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("../img/vr-grid-2.jpg") no-repeat 50% center/cover;
 }
 
 .hover-background.ar-two {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../img/ar-grid-2.jpg') no-repeat 50% center/cover;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("../img/ar-grid-2.jpg") no-repeat 50% center/cover;
 }
 
 .hover-background.holo-two {
-  background: url('../img/holo-grid-2.jpg') no-repeat 50% center/cover;
+  background: url("../img/holo-grid-2.jpg") no-repeat 50% center/cover;
 }
 
 .grid-item:hover .hover-background {
@@ -303,7 +501,7 @@
   position: absolute;
 }
 
-.glitch .glitch__item:nth-child(n+2) {
+.glitch .glitch__item:nth-child(n + 2) {
   opacity: 0;
   animation-duration: 4s;
   animation-delay: 2s;
@@ -338,6 +536,28 @@
 @media screen and (max-width: 991px) {
   main {
     margin-top: -95px;
+  }
+
+  .showcase,
+  .showcase header,
+  .social {
+    padding: 30px;
+  }
+
+  .overlay-text h2 {
+    font-size: 3.25em;
+  }
+
+  .overlay-text h3 {
+    font-size: 1.75em;
+  }
+
+  .overlay-text p {
+    font-size: 0.95em;
+  }
+
+  .description.first {
+    margin-top: 120px;
   }
 
   .description.first .number-title-container {
@@ -402,7 +622,8 @@
 @media screen and (max-width: 767px) {
   .description.first .big-background {
     height: 75%;
-    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url('../img/hologram-background.jpg') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)),
+      url("../img/hologram-background.jpg") no-repeat center/cover;
   }
 
   .description.first .number-title-container {
@@ -412,7 +633,7 @@
 
   .description.second .big-background {
     height: 65%;
-    background: url('../img/vr-game-bg.jpg') no-repeat bottom/cover;
+    background: url("../img/vr-game-bg.jpg") no-repeat bottom/cover;
   }
 
   .description.second .container-box .the-box2 .the-box-img {
@@ -437,7 +658,7 @@
 
   .description.third .big-background {
     height: 65%;
-    background: url('../img/ar-background-2.jpg') no-repeat bottom/cover;
+    background: url("../img/ar-background-2.jpg") no-repeat bottom/cover;
   }
 
   .description.third .container-box {
@@ -466,6 +687,16 @@
     text-align: center !important;
     top: 50%;
     left: -15%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .overlay-text h2 {
+    font-size: 2.15em;
+  }
+
+  .overlay-text h3 {
+    font-size: 1.15em;
   }
 }
 
@@ -564,6 +795,18 @@
   }
 }
 
+@media only screen and (min-device-width: 411px) and (min-device-height: 731px) and (max-device-height: 731px) and (orientation: portrait) {
+  .social {
+    bottom: 80px;
+  }
+}
+
+@media only screen and (min-device-width: 411px) and (min-device-height: 823px) and (max-device-height: 823px) and (orientation: portrait) {
+  .social {
+    bottom: 115px;
+  }
+}
+
 @media only screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: portrait) {
   .description.first {
     margin-bottom: 25px;
@@ -647,13 +890,19 @@
   }
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) {
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) {
   .first-hologram-padding {
     padding-top: 1rem !important;
   }
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) {
+@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (max-device-height: 812px) and (orientation: portrait) {
+  .social {
+    bottom: 115px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) {
   .first-hologram-padding {
     padding-top: 3rem;
   }
@@ -667,13 +916,25 @@
   }
 }
 
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) {
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) {
+  .social {
+    bottom: 85px;
+  }
+
   .description.first .big-background {
     height: 68% !important;
   }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) {
+  .social {
+    bottom: 20px;
+  }
+
+  .overlay-text p {
+    font-size: 0.85em;
+  }
+
   .description .number-title-container .title-for-project {
     font-size: 0.8em !important;
   }
@@ -760,13 +1021,17 @@
   }
 }
 
-@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+@media only screen and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  .social {
+    bottom: 120px;
+  }
+
   .description {
     height: 100vh;
   }
 
   .description .paragraph {
-    font-size: 1.2em !important;
+    font-size: 1.1em !important;
   }
 
   .description.second .container-box .the-box2 .the-box-img {
@@ -788,6 +1053,18 @@
 }
 
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .overlay-text p {
+    font-size: 1.25em;
+  }
+
+  .showcase, .showcase header, .social {
+    padding: 50px;
+  }
+
+  .social {
+    bottom: 240px;
+  }
+
   .description {
     height: 75vh;
   }
@@ -808,10 +1085,43 @@
   .description.third .number-title-container .title-for-project {
     top: 7.5%;
   }
-
 }
 
 @media only screen and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) {
+  .mobile-nav {
+    margin-top: 10px;
+  }
+
+  .overlay-text p,
+  .overlay-text p span {
+    font-weight: normal;
+  }
+
+  .overlay-text p {
+    font-size: 1.65em;
+  }
+
+  .overlay-text a {
+    font-size: 1.45em;
+  }
+
+  a.neon-light {
+    font-size: 20px;
+  }
+
+  a.btn-showcase-video:hover::after,
+  a.btn-showcase-video:focus::after {
+    transform: scale(1.85, 2.15);
+  }
+
+  .social {
+    bottom: 300px;
+  }
+
+  i.fab {
+    font-size: 1.5rem;
+  }
+
   .description {
     height: 60vh;
   }
@@ -822,6 +1132,10 @@
 }
 
 @media only screen and (device-width: 1366px) and (device-height: 1024px) and (orientation: landscape) {
+  .social {
+    bottom: 250px;
+  }
+
   .description.first .number-title-container {
     top: 10%;
   }
@@ -853,7 +1167,7 @@
   }
 }
 
-@media only screen and (min-device-width : 1367px) and (max-device-width : 1920px) and (max-device-height : 1080px) {
+@media only screen and (min-device-width: 1367px) and (max-device-width: 1920px) and (max-device-height: 1080px) {
   .description .number-title-container {
     font-size: 1.8em;
   }
@@ -915,7 +1229,7 @@
   }
 }
 
-@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation : portrait) {
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   .description.first .number-title-container .numbering {
     left: 35%;
   }
@@ -943,7 +1257,7 @@
   }
 }
 
-@media only screen and (device-width: 280px) and (device-height: 653px) and (orientation : portrait) {
+@media only screen and (device-width: 280px) and (device-height: 653px) and (orientation: portrait) {
   .description .number-title-container .title-for-project {
     font-size: 0.8em !important;
   }
@@ -1072,7 +1386,6 @@
 }
 
 @keyframes glitch-anim-flash {
-
   0%,
   5% {
     opacity: 0.2;

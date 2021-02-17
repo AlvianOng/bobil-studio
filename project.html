@@ -15,6 +15,16 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
+    .brand-name {
+      color: #333;
+    }
+
+    @media screen and (max-width: 991px) {
+      .brand-name {
+        color: #fff;
+      }
+    }
+
     @media screen and (max-width: 1100px) {
       .custom-body {
         padding: 0;
@@ -43,12 +53,12 @@
     <div class="text">
       <header class="head">
         <div class="mobile-nav brand d-flex align-items-center">
-          <a href="index.html"><img src="img/logo.png" class="brand-logo" alt="logo"></a>
+          <a href="index.html" class="text-uppercase font-weight-bolder brand-name">BOBIL</a>
           <div class="menu-wrapper">
             <div class="hamburger-menu"></div>
           </div>
         </div>
-        <nav class="main-menu navbar navbar-expand-lg navbar-light container mr-0" style="padding: 1rem">
+        <nav class="main-menu navbar navbar-expand-lg navbar-light container mr-0" style="padding: 1rem; max-width:inherit">
           <figure id="home" class="bg-header"
             style="background: url(img/ar-background.jpg) no-repeat center center/cover;">
           </figure>
@@ -285,7 +295,7 @@
               class="fas fa-long-arrow-alt-up" style="font-size: 2rem; color: #595959;"></i></a>
         </div>
         <div class="col-12 px-0 footer-bottom">
-          <p class="mb-0 text-center copyright-bolder">© Bobil Studio 2020 | All rights reserved.</p>
+          <p class="mb-0 text-center copyright-bolder">© Bobil Studio 2021 | All rights reserved.</p>
         </div>
       </footer>
     </div>

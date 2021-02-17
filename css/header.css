@@ -75,9 +75,19 @@
   width: 50px;
 }
 
+.brand-name {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: 0.25s ease;
+}
+
+.brand-name.brand-color {
+  color: #007bff;
+}
+
 .mobile-nav {
   position: absolute;
-  padding: 15px 15px 10px;
+  padding: 17px 15px 10px 35px;
   top: 10px;
   left: 35px;
 }
@@ -88,6 +98,9 @@ header.head {
 }
 
 .main-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
   transform: translateY(0px);
 }
 
@@ -105,7 +118,7 @@ a.neon-light {
   position: relative;
   display: inline-block;
   padding: 15px 25px;
-  color: #000 !important;
+  color: #333;
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
   font-size: 15px;
@@ -123,7 +136,7 @@ a.neon-light::before {
   display: block;
   content: '';
   height: 1px;
-  background: #22364b;
+  background: #333;
   width: 0%;
   transition: width .75s;
 }
@@ -280,13 +293,21 @@ a.neon-light span {
     color: #1127d0 !important;
   }
 
-  a.neon-light.active::after,
-  a.neon-light.active::before {
-    background: #22364b !important;
+  a.neon-light:hover,
+  a.neon-light::after:hover
+  a.neon-light::before:hover {
+    color: #333 !important;
   }
 
-  .main-menu a.neon-light:hover {
-    color: #333 !important;
+  .main-menu a.neon-light::after,
+  .main-menu a.neon-light::before {
+    font-size: 1.75rem;
+    background: #fff !important;
+  }
+
+  a.neon-light.active::after,
+  a.neon-light.active::before {
+    background: #1127d0 !important;
   }
 
   .main-menu a.neon-light.active {
